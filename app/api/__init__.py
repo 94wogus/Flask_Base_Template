@@ -3,6 +3,7 @@ from flask import Blueprint
 api = Blueprint('api', __name__)
 
 from . import request_hadler
+from . import User
 
 
 @api.route('/', methods=['GET'])

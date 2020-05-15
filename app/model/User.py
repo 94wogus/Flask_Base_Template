@@ -1,6 +1,6 @@
 from mongoengine import *
-from flask_login import UserMixin
 from .Base import _BaseDocument
+from flask_login import UserMixin
 
 
 class User(_BaseDocument, UserMixin):
