@@ -1,0 +1,12 @@
+__pycache__
+.vscode
+venv
+.venv
+.idea/
+# env variables
+.env*
+
+.idea
+ngrok
+*.exe
+node_modules
