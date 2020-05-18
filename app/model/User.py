@@ -1,6 +1,7 @@
 from mongoengine import *
 from .Base import _BaseDocument
 from flask_login import UserMixin
+import datetime
 
 
 class User(_BaseDocument, UserMixin):
@@ -25,5 +26,11 @@ class User(_BaseDocument, UserMixin):
         return str(self.id)
 
     def to_dict(self):
-        data = self.to_mongo()
+        data = {
+            "id": str(self.id),
+            "name": self.name,
+            "gender": self.gender,
+            "birth": self.birth.strftime("%Y-%m-%d")
+        }
+
         return data
